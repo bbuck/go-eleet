@@ -9,7 +9,7 @@ type ESType int
 
 // Eleetscript types
 const (
-	ESTypeString ESType = 1 << iota
+	ESTypeString ESType = iota
 	ESTypeInteger
 	ESTypeFloat
 	ESTypeBool

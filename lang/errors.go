@@ -26,3 +26,12 @@ type ESInvalidValueError struct {
 func (e ESInvalidValueError) Error() string {
 	return fmt.Sprintf("The ESValue is of type %s, the value given was %T", e.esVal, e.given)
 }
+
+type InvalidIdentifierError struct {
+	ident, reason string
+}
+
+// Return a message indicating the invalid identifier and why it's invalid.
+func (e InvalidIdentifierError) Error() string {
+	return fmt.Sprintf("The identifier \"%s\" is invalid: %s", e.ident, e.reason)
+}
